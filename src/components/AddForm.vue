@@ -1,6 +1,12 @@
 <template>
 
-  <form class="row  col-lg-8 offset-lg-2">
+  <div class="col-lg-12">
+    <div class="col-lg-2 offset-lg-5">
+      <h2>Add a book</h2>
+    </div>
+  </div>
+
+  <form class="row  col-lg-8 offset-lg-2" id="mainAddForm" >
 
     <div class="col-lg-6">
       <div class="form-group col-lg-10 offset-lg-1">
@@ -41,14 +47,14 @@
         <input type="range" id="newRating" class="form-control" name="newRating" min="0" max="10" v-model="new_rating">
         <!--      <input type="range" class="form-control" id="newRating" placeholder="new rate" v-model="new_rating">-->
 
-        <label for="newRating">Rating</label>
+        <label for="newRating"> {{ this.new_rating }}</label>
 
       </div>
     </div>
 
 
     <div id="actions" class="col-lg-8 offset-lg-2">
-      <button class="btn btn-primary col-lg-2 offset-lg-2" v-on:click="add_item">Submit</button>
+      <button class="btn btn-primary col-lg-2 offset-lg-3" v-on:click="add_item">Submit</button>
       <button type="reset" class="btn btn-primary col-lg-2 offset-lg-2" v-on:click="add_item">Reset</button>
     </div>
 
@@ -74,7 +80,7 @@ export default {
       new_summary: '',
       new_img: '',
       new_date: '',
-      new_rating: 'rate',
+      new_rating: 5,
       new_tag: ''
     }
   },
@@ -126,6 +132,16 @@ export default {
 
 #actions {
   margin-top: 4%;
+}
+
+#mainAddForm{
+  padding-bottom: 10%;
+  border: 1px solid #3357B7;
+  box-shadow: rgba(51,87,183, 0.55) 0px 5px 15px;
+  margin-top: 2%; margin-bottom: 10%;
+  height: 400px;
+
+
 }
 
 

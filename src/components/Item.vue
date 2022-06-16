@@ -35,7 +35,9 @@
   <tr v-show="details">
 
       <td colspan="3">
+        <span style="word-break: break-word;">
           {{ item.summary }}
+        </span>
       </td>
 <!--      <img src="../img/20000.jpg" alt="" style="width: 50px">-->
 <!--    <div> {{ item }} </div>-->
